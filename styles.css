@@ -7,9 +7,21 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.925);
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+}
+body:hover {
+  background: linear-gradient(
+    109.6deg,
+    rgba(0, 0, 0, 0.93) 11.2%,
+    rgb(63, 61, 61) 78.9%
+  );
 }
 .header {
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +35,7 @@ body {
 }
 
 .logo {
-  color: #fff;
+  color: orange;
   font-size: 18px;
   text-decoration: none;
   font-weight: 500;
@@ -32,7 +44,7 @@ body {
 
 .navbar a {
   font-size: 18px;
-  color: #fff;
+  color: orange;
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -41,18 +53,52 @@ body {
 
 .navbar a:hover {
   font-size: 25px;
-  color: #ffffff81;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 35px;
+  color: rgb(238, 255, 0);
   transform: translateY(-10px) translateZ(0);
 }
 
 #cli {
-  margin-top: 100px;
-  font-size: 20px;
-  color: lime;
+  position: relative;
+  font-weight: 700;
+  top: 100px;
+  width: 100%;
+  font-size: 30px;
+  color: rgb(255, 166, 0);
   padding: 20px;
   font-family: "Courier New", Courier, monospace;
   white-space: pre;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  color: orange;
+  transition: 2s;
+}
+.home-content {
+  max-width: 600px;
+}
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: orange;
+}
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: palegoldenrod;
+}
+.home-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.home-content .btn-box {
+  width: 150px;
+  height: 100%;
 }
