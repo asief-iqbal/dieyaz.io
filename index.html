@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="iMxS94z5WE9eHXZXqDUhOj2k9iA6hlHkxlWZp1GXCPg" />
+    <meta
+      name="google-site-verification"
+      content="iMxS94z5WE9eHXZXqDUhOj2k9iA6hlHkxlWZp1GXCPg"
+    />
     <title>My Dev Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -11,17 +14,18 @@
     <header class="header">
       <a href="#" class="logo">Dieyaz</a>
       <nav class="navbar">
-        <a href="#about">About</a>
+        <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
+        <a href="#Blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
     <br />
-    <div id="cli">Dieyaz a</div>
+    <div id="cli">Dieyaz is a</div>
     <script>
       var i = 0;
       var j = 0;
-      var txt = [" Creator", "Web Dev", "Student"];
+      var txt = [" Creator...", "n Aspirant...", " Web Dev...", " Student..."];
       var speed = 100;
 
       function typeWriter() {
@@ -30,7 +34,7 @@
           i++;
           setTimeout(typeWriter, speed);
         } else {
-          if (document.getElementById("cli").innerHTML.length > 9) {
+          if (document.getElementById("cli").innerHTML.length > 11) {
             document.getElementById("cli").innerHTML = document
               .getElementById("cli")
               .innerHTML.slice(0, -1);
@@ -45,6 +49,22 @@
 
       typeWriter();
     </script>
+
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Dieyaz</h1>
+        <h3>Web Developer | Blogger</h3>
+        <p>
+          I am a student at BRAC University, studying Computer Science. I am a
+          web developer and a blogger. I am passionate about creating solutions
+          to problems and making the world a better place.
+        </p>
+        <div class="btn-box">
+          <a href="#">Hire</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 
