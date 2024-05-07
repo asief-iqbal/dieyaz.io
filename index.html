@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Dev Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Dev Portfolio</h1>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Dieyaz</a>
+      <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
+    <br />
+    <div id="cli">Dieyaz a</div>
+    <script>
+      var i = 0;
+      var j = 0;
+      var txt = [" Creator", "....", "Web Dev", "....", "Student"];
+      var speed = 100;
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+      function typeWriter() {
+        if (i < txt[j].length) {
+          document.getElementById("cli").innerHTML += txt[j].charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          if (document.getElementById("cli").innerHTML.length > 9) {
+            document.getElementById("cli").innerHTML = document
+              .getElementById("cli")
+              .innerHTML.slice(0, -1);
+            setTimeout(typeWriter, speed);
+          } else {
+            i = 0;
+            j = (j + 1) % txt.length;
+            setTimeout(typeWriter, 2000);
+          }
+        }
+      }
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself and your skills here.</p>
-    </section>
+      typeWriter();
+    </script>
+  </body>
+</html>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>List your projects and provide links to their respective pages or repositories.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Include your contact information and any relevant social media links.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2022 My Dev Portfolio. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
