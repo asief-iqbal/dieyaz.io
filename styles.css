@@ -1,15 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #cca152;
+  background-color: rgba(0, 0, 0, 0.925);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 2s;
+}
+
+.navbar a:hover {
+  font-size: 25px;
+  color: #ffffff81;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transform: translateY(-10px) translateZ(0);
+}
+
+#cli {
+  margin-top: 100px;
+  font-size: 20px;
+  color: lime;
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre;
 }
