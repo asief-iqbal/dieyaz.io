@@ -24,24 +24,19 @@ function typeWriter() {
 
 typeWriter();
 
+var element = document.getElementById("your-element-id"); // replace 'your-element-id' with your element's id
+
 function updateBackground(e) {
-  const x = (e.clientX / window.innerWidth) * 100;
-  const y = (e.clientY / window.innerHeight) * 100;
-  document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)`;
+  const x = (e.clientX / element.offsetWidth) * 100;
+  const y = (e.clientY / element.offsetHeight) * 100;
+  element.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)`;
 }
 
-document.addEventListener("mousemove", updateBackground);
-document.addEventListener(
-  "touchmove",
-  function (e) {
-    // Prevent scrolling
-    e.preventDefault();
-
-    // Use the first touch point to update the background
-    e.clientX = e.touches[0].clientX;
-    e.clientY = e.touches[0].clientY;
-    updateBackground(e);
-  },
-  { passive: false }
-); // Set the passive option to false to enable preventDefault
-
+element.addEventListener("mousemove", updateBackground);
+element.addEventListener("touchmove", function (e) {
+  var touch = e.touches[0];
+  var touchLocation = touch.target.getBoundingClientRect();
+  e.clientX = touch.clientX - touchLocation.left;
+  e.clientY = touch.clientY - touchLocation.top;
+  updateBackground(e);
+});
