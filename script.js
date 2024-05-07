@@ -31,9 +31,17 @@ function updateBackground(e) {
 }
 
 document.addEventListener("mousemove", updateBackground);
-document.addEventListener("touchmove", function (e) {
-  // Use the first touch point to update the background
-  e.clientX = e.touches[0].clientX;
-  e.clientY = e.touches[0].clientY;
-  updateBackground(e);
-});
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    // Prevent scrolling
+    e.preventDefault();
+
+    // Use the first touch point to update the background
+    e.clientX = e.touches[0].clientX;
+    e.clientY = e.touches[0].clientY;
+    updateBackground(e);
+  },
+  { passive: false }
+); // Set the passive option to false to enable preventDefault
+
