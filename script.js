@@ -24,8 +24,16 @@ function typeWriter() {
 
 typeWriter();
 
-document.addEventListener("mousemove", function (e) {
+function updateBackground(e) {
   const x = (e.clientX / window.innerWidth) * 100;
   const y = (e.clientY / window.innerHeight) * 100;
   document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)`;
+}
+
+document.addEventListener("mousemove", updateBackground);
+document.addEventListener("touchmove", function (e) {
+  // Use the first touch point to update the background
+  e.clientX = e.touches[0].clientX;
+  e.clientY = e.touches[0].clientY;
+  updateBackground(e);
 });
