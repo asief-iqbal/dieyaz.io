@@ -3,200 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dieyaz Portfolio</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
+    <meta
+      name="google-site-verification"
+      content="iMxS94z5WE9eHXZXqDUhOj2k9iA6hlHkxlWZp1GXCPg"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>My Dev Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      :root {
-        --primary-color: #00bcd4;
-        --secondary-color: #ff9800;
-        --bg-color: #121212;
-        --text-color: #ffffff;
-        --accent-color: #4caf50;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-
-      body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 10%;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        background-color: rgba(18, 18, 18, 0.95);
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-decoration: none;
-      }
-
-      .navbar a {
-        color: var(--text-color);
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 18px;
-        position: relative;
-      }
-
-      .navbar a:hover {
-        color: var(--primary-color);
-      }
-
-      .home {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        background: linear-gradient(135deg, #1c1c1c, #242424);
-        padding: 0 10%;
-      }
-
-      .home h1 {
-        font-size: 60px;
-        font-weight: 700;
-      }
-
-      .home h1 .highlight {
-        color: var(--primary-color);
-      }
-
-      .home h3 {
-        font-size: 28px;
-        font-weight: 500;
-        margin-top: 10px;
-        color: var(--secondary-color);
-      }
-
-      .home p {
-        margin: 20px 0;
-        font-size: 18px;
-        max-width: 600px;
-      }
-
-      .btn-box {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
-      }
-
-      .btn {
-        text-decoration: none;
-        color: var(--text-color);
-        background: var(--primary-color);
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-
-      .btn:hover {
-        background: var(--accent-color);
-      }
-
-      .projects {
-        padding: 50px 10%;
-        background-color: #1c1c1c;
-        text-align: center;
-      }
-
-      .section-title {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: var(--primary-color);
-      }
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-      }
-
-      .project-card {
-        background: #2a2a2a;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s;
-        text-align: left;
-      }
-
-      .project-card:hover {
-        transform: translateY(-10px);
-      }
-
-      .project-card i {
-        font-size: 40px;
-        color: var(--primary-color);
-        margin-bottom: 10px;
-      }
-
-      .project-card h3 {
-        margin: 10px 0;
-        font-size: 22px;
-        color: var(--text-color);
-      }
-
-      .project-card p {
-        color: #cccccc;
-        font-size: 16px;
-      }
-
-      .footer {
-        padding: 20px 10%;
-        background: #1c1c1c;
-        text-align: center;
-        color: var(--text-color);
-        margin-top: 50px;
-      }
-
-      .socials {
-        margin-bottom: 10px;
-      }
-
-      .socials a {
-        color: var(--primary-color);
-        margin: 0 10px;
-        font-size: 20px;
-        transition: color 0.3s;
-      }
-
-      .socials a:hover {
-        color: var(--accent-color);
-      }
-
-      .footer p {
-        font-size: 14px;
-        color: #aaaaaa;
-      }
-    </style>
   </head>
   <body>
     <header class="header">
@@ -204,55 +16,29 @@
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
+        <a href="#Blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+    <br />
+    <div id="cli">Dieyaz is a</div>
 
     <section id="home" class="home">
-      <h1>
-        Hi, I'm <span class="highlight">Dieyaz</span>
-      </h1>
-      <h3>Web Developer | Blogger</h3>
-      <p>
-        I am a Computer Science student at BRAC University, specializing in
-        web development and content creation. I am passionate about solving
-        problems and making a positive impact on the world.
-      </p>
-      <div class="btn-box">
-        <a href="#contact" class="btn">Hire Me</a>
-        <a href="#projects" class="btn">View Projects</a>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <i class="fas fa-code"></i>
-          <h3>Portfolio Website</h3>
-          <p>A responsive portfolio website to showcase my skills and projects.</p>
-        </div>
-        <div class="project-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Mobile App Design</h3>
-          <p>Created a modern UI/UX design for a finance management app.</p>
-        </div>
-        <div class="project-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Blog CMS</h3>
-          <p>A custom content management system for blogging.</p>
+      <div class="home-content">
+        <h1>Hi, I'm Dieyaz</h1>
+        <h3>Web Developer | Blogger</h3>
+        <p>
+          I am a student at BRAC University, studying Computer Science. I am a
+          web developer and a blogger. I am passionate about creating solutions
+          to problems and making the world a better place.
+        </p>
+        <div class="btn-box">
+          <a href="#">Hire</a>
+          <a href="#">Contact</a>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="socials">
-        <a href="https://github.com"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-      </div>
-      <p>&copy; 2025 Dieyaz. All Rights Reserved.</p>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
