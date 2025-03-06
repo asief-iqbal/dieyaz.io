@@ -1,43 +1,100 @@
-var i = 0;
-var j = 0;
-var txt = [" Creator...", "n Aspirant...", " Web Dev...", " Student..."];
-var speed = 100;
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+  /* Hamburger Menu Toggle */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
 
-function typeWriter() {
-  if (i < txt[j].length) {
-    document.querySelector("#cli").innerHTML += txt[j].charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  } else {
-    if (document.querySelector("#cli").innerHTML.length > 11) {
-      document.querySelector("#cli").innerHTML = document
-        .querySelector("#cli")
-        .innerHTML.slice(0, -1);
-      setTimeout(typeWriter, speed);
+  /* Smooth Scrolling */
+  document.querySelectorAll('a.nav-item').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      navLinks.classList.remove('active'); // Close mobile menu if open
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  /* Typewriter Effect in Hero Section */
+  const typewriter = document.getElementById('typewriter');
+  const messages = ['Web Developer.', 'Designer.', 'Creator.'];
+  let messageIndex = 0;
+  let charIndex = 0;
+  function type() {
+    if (charIndex < messages[messageIndex].length) {
+      typewriter.textContent += messages[messageIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 150);
     } else {
-      i = 0;
-      j = (j + 1) % txt.length;
-      setTimeout(typeWriter, 2000);
+      setTimeout(erase, 2000);
     }
   }
-}
+  function erase() {
+    if (charIndex > 0) {
+      typewriter.textContent = messages[messageIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 100);
+    } else {
+      messageIndex = (messageIndex + 1) % messages.length;
+      setTimeout(type, 500);
+    }
+  }
+  type();
 
-typeWriter();
+  /* Animate Progress Bars on Scroll */
+  const progressBars = document.querySelectorAll('.progress');
+  function animateProgress() {
+    progressBars.forEach(bar => {
+      const targetWidth = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = targetWidth;
+      }, 300);
+    });
+  }
+  // Trigger once when the skills section is in view
+  const skillsSection = document.getElementById('skills');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateProgress();
+        observer.unobserve(skillsSection);
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(skillsSection);
 
-var element = document.querySelector("#your-element-id"); // replace 'your-element-id' with your element's id
+  /* Modal Popup for Projects */
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const modalClose = document.getElementById('modal-close');
+  
+  document.querySelectorAll('.project-item').forEach(item => {
+    item.addEventListener('click', () => {
+      modalTitle.textContent = item.dataset.title;
+      modalDescription.textContent = item.dataset.description;
+      modal.style.display = 'flex';
+    });
+  });
+  
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 
-function updateBackground(e) {
-  const x = (e.clientX / window.innerWidth) * 100;
-  const y = (e.clientY / window.innerHeight) * 100;
-  document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)`;
-}
-
-document.addEventListener("mousemove", updateBackground);
-document.addEventListener("touchmove", function (e) {
-  e.clientX = e.touches[0].clientX;
-  e.clientY = e.touches[0].clientY;
-  updateBackground(e);
-  e.clientY = e.touches[0].clientY;
-  updateBackground(e);
+  /* Theme Toggle */
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+  });
 });
 
