@@ -283,3 +283,22 @@ footer .social-icons a:hover {
     display: flex;
   }
 }
+/* Dark Theme Styles */
+body.dark-theme {
+  background: #222;
+  color: #ddd;
+}
+body.dark-theme header, 
+body.dark-theme footer {
+  background: #333;
+}
+body.dark-theme .nav-links a {
+  color: #ddd;
+}
+body.dark-theme .hero {
+  background: linear-gradient(135deg, #555, #333);
+}
+body.dark-theme .btn {
+  background: #444;
+  color: #fff;
+}
