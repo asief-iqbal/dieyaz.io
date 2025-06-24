@@ -3,153 +3,491 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asief Iqbal Dieyaz | AI Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Dieyaz | Creative Developer</title>
+  <!-- Modern Font - Inter + Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Animation library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="loading">
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <!-- Navigation -->
   <header>
     <div class="container">
       <div class="logo">
-        <span class="logo-name">ASIEF IQBAL DIEYAZ</span>
+        <span class="logo-name">Dieyaz</span>
+        <span class="logo-dot">.</span>
       </div>
       <nav id="navbar">
         <ul class="nav-links">
-          <li><a href="#about">Summary</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-item">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#services" class="nav-item">Services</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button>
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <div class="hero-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <div class="hero-intro">Hello, I'm</div>
+        <h1>Dieyaz<span class="accent-dot">.</span></h1>
+        <h2 id="typewriter"></h2>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="scroll"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
       <div class="about-content">
-        <div class="about-image">
-          <img src="pic.jpg" alt="Asief Iqbal Dieyaz" style="border-radius:50%;width:150px;height:150px;object-fit:cover;" />
+        <div class="about-image" data-aos="fade-right">
+          <div class="image-container">
+            <img src="pic.jpg" alt="Dieyaz" />
+            <div class="image-outline"></div>
+          </div>
+          <div class="experience-badge">
+            <span class="number">1+</span>
+            <span class="text">Years of Experience</span>
+          </div>
         </div>
-        <div class="about-text">
-          <h1>ASIEF IQBAL DIEYAZ</h1>
-          <h2 style="color:#0074d9;">AI Engineer</h2>
-          <p><i class="fas fa-phone"></i> <a href="tel:+8801768128292">+8801768128292</a> &nbsp; <i class="fas fa-envelope"></i> <a href="mailto:asiefiqbal7@gmail.com">asiefiqbal7@gmail.com</a></p>
-          <p>
-            <a href="https://www.linkedin.com/in/asiefiqbal7/" target="_blank">Linkedin</a> |
-            <a href="https://dieyaz.io" target="_blank">Personal Website</a>
-          </p>
-          <h3>Summary</h3>
-          <p>I am a driven individual complemented by hands-on experience in AI Engineering, Data Science, and Full Stack Development. I have a proven track record of delivering high-quality, scalable solutions that enhance performance and user experience, as demonstrated in my projects. I have expertise in AI infrastructure, AI Agents, ML model implementation, Data Engineering, and Data Analysis. I am currently working on LLM Adaptability in resource-constrained environments.</p>
+        <div class="about-text" data-aos="fade-left">
+          <p class="lead">I'm a passionate full-stack developer specializing in creating exceptional digital experiences.</p>
+          <p>I combine technical expertise with creative problem-solving to build modern, user-friendly applications that deliver real business value. My approach focuses on clean code, optimal performance, and intuitive interfaces.</p>
+          <div class="about-info">
+            <div class="info-item">
+              <span class="info-title">Name:</span>
+              <span class="info-value">Asieef Iqbal Dieyaz</span>
+            </div>
+            <div class="info-item">
+              <span class="info-title">Email:</span>
+              <span class="info-value">asiefiqbal7@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-title">Location:</span>
+              <span class="info-value">Dhaka, Bangladesh</span>
+            </div>
+            <div class="info-item">
+              <span class="info-title">Availability:</span>
+              <span class="info-value">Open for opportunities</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Download Resume <i class="fas fa-download"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="education" class="section bg-light">
+  <!-- Services Section -->
+  <section id="services" class="section bg-light">
     <div class="container">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>Bachelor of Science</h3>
-        <p><strong>BRAC University</strong> | 01/2022 - 01/2026 | Dhaka, Bangladesh</p>
-        <ul>
-          <li>High Distinction - Awarded to candidates whose CGPA is between 3.65 to 3.79</li>
-        </ul>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">What I Do</span>
+        <h2 class="section-title">My Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Creating responsive, performant websites using modern technologies and frameworks that drive business growth.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>App Development</h3>
+          <p>Building cross-platform mobile applications that provide seamless user experiences across all devices.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Designing intuitive, accessible interfaces that enhance user engagement and satisfaction.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Backend Development</h3>
+          <p>Creating robust APIs and server architectures that power scalable web applications.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <h3>GenWear</h3>
-          <p><a href="https://genwear.vercel.app/" target="_blank">https://genwear.vercel.app/</a></p>
-          <ul>
-            <li>AI-powered 3D customizable ecommerce site</li>
-            <li>Users can customize, generate or change their product to their specification and view detailed 3D views</li>
-            <li>Developed an AI-driven customizable merchandise store using Next.js, React, Tailwind CSS, and DALL-E 3 (upgrading to stable diffusion)</li>
-          </ul>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      <div class="project-grid">
+        <!-- Project Item -->
+        <div class="project-item" data-category="web" data-aos="fade-up">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-Commerce Platform" />
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce Platform</h3>
+            <p>A full-featured online store with real-time inventory management</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="project-item">
-          <h3>Job-Portal</h3>
-          <p><a href="https://github.com/asief-iqbal/Job-Portal-App" target="_blank">https://github.com/asief-iqbal/Job-Portal-App</a></p>
-          <ul>
-            <li>A full-stack recruitment platform to streamline hiring workflows</li>
-            <li>Implemented Node.js/Express backend, React frontend, and Tailwind UI</li>
-            <li>Enhanced candidate-employer matching accuracy through advanced filtering, role-based access</li>
-          </ul>
+        <!-- Project Item -->
+        <div class="project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fitness Tracker App" />
+          </div>
+          <div class="project-info">
+            <h3>Fitness Tracker App</h3>
+            <p>Mobile application for tracking workouts and nutrition</p>
+            <div class="project-tech">
+              <span>React Native</span>
+              <span>Firebase</span>
+              <span>Redux</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="project-item">
-          <h3>SnapCafe</h3>
-          <p><a href="https://github.com/asief-iqbal/SnapCafe" target="_blank">https://github.com/asief-iqbal/SnapCafe</a></p>
-          <ul>
-            <li>Online café ordering system to optimize order processing efficiency and innovation discount system</li>
-            <li>Developed with vanilla HTML, CSS, JavaScript, PHP, and MySQL</li>
-            <li>Innovative discount system based on streak maintenance inspired from Snapchat for more customer engagement</li>
-          </ul>
+        <!-- Project Item -->
+        <div class="project-item" data-category="design" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Brand Redesign" />
+          </div>
+          <div class="project-info">
+            <h3>Brand Redesign</h3>
+            <p>Complete visual identity redesign for a tech startup</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>Photoshop</span>
+              <span>Illustrator</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-link"><i class="fab fa-behance"></i></a>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="section-cta" data-aos="fade-up">
+        <a href="#" class="btn btn-outline">View All Projects</a>
       </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="section bg-light">
     <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-columns">
-        <div class="skills-col">
-          <h3>Expertise</h3>
-          <ul>
-            <li>AI, ML, LLM, AI agents</li>
-            <li>Generative AI, Data Science</li>
-            <li>Data Analysis, Data Engineering</li>
-            <li>Statistical Modeling</li>
-          </ul>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">My Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-container">
+        <div class="skills-tabs" data-aos="fade-up">
+          <button class="tab-btn active" data-tab="frontend">Frontend</button>
+          <button class="tab-btn" data-tab="backend">Backend</button>
+          <button class="tab-btn" data-tab="tools">Tools</button>
         </div>
-        <div class="skills-col">
-          <h3>Languages</h3>
-          <ul>
-            <li>Python, JavaScript, SQL, PHP, CSS</li>
-          </ul>
-          <h3>Frameworks</h3>
-          <ul>
-            <li>Pytorch, TensorFlow, Next.js, React, TailwindCSS, Node.js, Express.js, MongoDB</li>
-          </ul>
-        </div>
-        <div class="skills-col">
-          <h3>Tools</h3>
-          <ul>
-            <li>AWS, Git, n8n, Docker</li>
-          </ul>
+        <div class="skills-content" data-aos="fade-up">
+          <div class="tab-content active" id="frontend">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <h4>HTML5</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <h4>CSS3</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <h4>JavaScript</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                <h4>React</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="backend">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                <h4>Node.js</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h4>MongoDB</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                <h4>Firebase</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h4>Express</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="tools">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <h4>Git</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                <h4>Figma</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                <h4>CLI</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                <h4>AWS</h4>
+                <div class="skill-level">
+                  <div class="skill-bar" data-level="65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="certifications" class="section">
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
     <div class="container">
-      <h2>Certifications</h2>
-      <ul>
-        <li>AI Engineer for Data Scientists Associate Certification - Datacamp</li>
-        <li><a href="https://www.datacamp.com/certificate/MLF001" target="_blank">Machine Learning Foundations</a> - AWS Educate</li>
-        <li>AI Fundamentals certificate - Datacamp</li>
-      </ul>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Client Feedback</span>
+        <h2 class="section-title">Testimonials</h2>
+      </div>
+      <div class="testimonial-slider" data-aos="fade-up">
+        <div class="testimonial-track">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Dieyaz delivered an exceptional website that perfectly captured our brand. Their technical skills and attention to detail made our project a huge success.</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" />
+                <div class="author-info">
+                  <h4>John Smith</h4>
+                  <p>CEO, TechStart</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Working with Dieyaz was a pleasure. They transformed our outdated platform into a modern, user-friendly system that has significantly increased our conversions.</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" />
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>Marketing Director, Elevate Inc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fas fa-quote-left"></i>
+                <p>The mobile app Dieyaz created for us exceeded our expectations. Their technical expertise and creative approach helped us stand out in a competitive market.</p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Robert Chen" />
+                <div class="author-info">
+                  <h4>Robert Chen</h4>
+                  <p>Founder, FitLife</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots"></div>
+          <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section bg-light">
     <div class="container">
-      <h2>Contact</h2>
-      <ul>
-        <li><i class="fas fa-phone"></i> <a href="tel:+8801768128292">+8801768128292</a></li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:asiefiqbal7@gmail.com">asiefiqbal7@gmail.com</a></li>
-        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/asiefiqbal7/" target="_blank">Linkedin</a></li>
-        <li><i class="fas fa-globe"></i> <a href="https://dieyaz.io" target="_blank">Personal Website</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
-      </ul>
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:hello@dieyaz.io">hello@dieyaz.io</a></p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>New York, NY, USA</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Phone</h3>
+            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-container" data-aos="fade-left">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <span class="input-focus-effect"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+              <span class="input-focus-effect"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required />
+              <span class="input-focus-effect"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              <span class="input-focus-effect"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -157,12 +495,28 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <span class="logo-name">ASIEF IQBAL DIEYAZ</span>
+          <span class="logo-name">Dieyaz</span>
+          <span class="logo-dot">.</span>
         </div>
-        <p>&copy; 2025 Asief Iqbal Dieyaz. All rights reserved.</p>
+        <p class="footer-tagline">Creating digital experiences that make a difference</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dieyaz. All rights reserved.</p>
+        <a href="#home" class="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
       </div>
     </div>
   </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
