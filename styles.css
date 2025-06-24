@@ -1346,3 +1346,147 @@ body.dark-theme #hamburger span {
     grid-template-columns: 1fr;
   }
 }
+
+/* Typewriter Effect */
+.typewriter-roles {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--primary);
+  border-right: 2px solid var(--primary);
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary); }
+}
+
+/* Larger Social Icons */
+.hero-socials.large-icons .social-icon {
+  font-size: 2.2rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(67, 97, 238, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-socials.large-icons .social-icon:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* Project Cards Modern */
+.project-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.project-card:hover {
+  box-shadow: 0 16px 40px rgba(67, 97, 238, 0.12);
+  transform: translateY(-6px) scale(1.02);
+}
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.project-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.25em 0.9em;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2em;
+}
+.project-links .btn {
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+/* Pill Badges for Skills */
+.pill-badges span {
+  display: inline-block;
+  background: var(--secondary);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.4em 1.1em;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0.2em 0.3em 0.2em 0;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+.pill-badges span:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Floating Download CV Button */
+.floating-cv-btn {
+  position: fixed;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  z-index: 2000;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.9em 1.7em;
+  border-radius: 999px;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 8px 32px rgba(67, 97, 238, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.floating-cv-btn:hover {
+  background: var(--secondary);
+  box-shadow: 0 16px 40px rgba(67, 97, 238, 0.22);
+  transform: translateY(-3px) scale(1.04);
+  color: #fff;
+}
+
+/* Section Fade-in Animations */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* More Whitespace */
+.section {
+  padding: 120px 0 100px 0;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.2rem;
+  }
+  .floating-cv-btn {
+    right: 4vw;
+    bottom: 4vw;
+    font-size: 1em;
+    padding: 0.7em 1.2em;
+  }
+}

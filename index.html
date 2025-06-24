@@ -64,12 +64,12 @@
       <div class="hero-content" data-aos="fade-up">
         <div class="hero-intro">Hello, I'm</div>
         <h1>ASIEF IQBAL DIEYAZ<span class="accent-dot">.</span></h1>
-        <h2 id="typewriter">AI Engineer</h2>
+        <h2 id="typewriter"><span class="typewriter-roles">AI Engineer</span></h2>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View My Work</a>
           <a href="#contact" class="btn btn-outline">Get In Touch</a>
         </div>
-        <div class="hero-socials">
+        <div class="hero-socials large-icons">
           <a href="https://www.linkedin.com/in/asiefiqbal7/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:asiefiqbal7@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://github.com/asief-iqbal" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -213,38 +213,63 @@
         <button class="filter-btn" data-filter="design">Design</button>
       </div>
       <div class="project-grid">
-        <div class="project-item" data-category="web" data-aos="fade-up">
-          <div class="project-info">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-header">
             <h3>GenWear</h3>
-            <p>AI-powered 3D customizable ecommerce site</p>
-            <ul>
-              <li>AI-powered 3D customizable ecommerce where users can customize, generate or change their product to their specification</li>
-              <li>Users can view detailed 3D view of products</li>
-              <li>Developed an AI-driven customizable merchandise store to elevate personalization for users by integrating Next.js, React, Tailwind CSS, and DALL-E 3 (upgrading to stable diffusion)</li>
-              <li><a href="https://genwear.vercel.app/">genwear.vercel.app</a></li>
-            </ul>
+            <div class="project-badges">
+              <span class="badge">Next.js</span>
+              <span class="badge">React</span>
+              <span class="badge">Tailwind CSS</span>
+              <span class="badge">DALL-E 3</span>
+            </div>
+          </div>
+          <p>AI-powered 3D customizable ecommerce site</p>
+          <ul>
+            <li>AI-powered 3D customizable ecommerce where users can customize, generate or change their product to their specification</li>
+            <li>Users can view detailed 3D view of products</li>
+            <li>Developed an AI-driven customizable merchandise store to elevate personalization for users by integrating Next.js, React, Tailwind CSS, and DALL-E 3 (upgrading to stable diffusion)</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://genwear.vercel.app/" class="btn btn-outline" target="_blank">View Project</a>
           </div>
         </div>
-        <div class="project-item" data-category="web" data-aos="fade-up">
-          <div class="project-info">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-header">
             <h3>Job-Portal</h3>
-            <p>A full-stack recruitment platform to streamline hiring workflows</p>
-            <ul>
-              <li>Built a full-stack recruitment platform to streamline hiring workflows by implementing Node.js/Express backend, React frontend, and Tailwind UI</li>
-              <li>Enhanced candidate-employer matching accuracy through advanced filtering, role-based access</li>
-              <li><a href="https://github.com/asief-iqbal/Job-Portal-App">github.com/asief-iqbal/Job-Portal-App</a></li>
-            </ul>
+            <div class="project-badges">
+              <span class="badge">Node.js</span>
+              <span class="badge">Express.js</span>
+              <span class="badge">React</span>
+              <span class="badge">Tailwind CSS</span>
+            </div>
+          </div>
+          <p>A full-stack recruitment platform to streamline hiring workflows</p>
+          <ul>
+            <li>Built a full-stack recruitment platform to streamline hiring workflows by implementing Node.js/Express backend, React frontend, and Tailwind UI</li>
+            <li>Enhanced candidate-employer matching accuracy through advanced filtering, role-based access</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/asief-iqbal/Job-Portal-App" class="btn btn-outline" target="_blank">Source Code</a>
           </div>
         </div>
-        <div class="project-item" data-category="web" data-aos="fade-up">
-          <div class="project-info">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-header">
             <h3>SnapCafe</h3>
-            <p>Online café ordering system to optimize order processing efficiency and innovation discount system</p>
-            <ul>
-              <li>Designed and developed an online café ordering system to optimize order processing efficiency using vanilla HTML, CSS, JavaScript, PHP, and MySQL</li>
-              <li>Innovative discount system based on streak maintenance inspired from Snapchat for more customer engagement</li>
-              <li><a href="https://github.com/asief-iqbal/SnapCafe">github.com/asief-iqbal/SnapCafe</a></li>
-            </ul>
+            <div class="project-badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">PHP</span>
+              <span class="badge">MySQL</span>
+            </div>
+          </div>
+          <p>Online café ordering system to optimize order processing efficiency and innovation discount system</p>
+          <ul>
+            <li>Designed and developed an online café ordering system to optimize order processing efficiency using vanilla HTML, CSS, JavaScript, PHP, and MySQL</li>
+            <li>Innovative discount system based on streak maintenance inspired from Snapchat for more customer engagement</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/asief-iqbal/SnapCafe" class="btn btn-outline" target="_blank">Source Code</a>
           </div>
         </div>
       </div>
@@ -262,9 +287,9 @@
         <h2 class="section-title">Skills</h2>
       </div>
       <div class="skills-content">
-        <div class="skills-group">
+        <div class="skills-group" data-aos="fade-up">
           <h3>Expertise</h3>
-          <div class="skills-list">
+          <div class="skills-list pill-badges">
             <span>AI</span>
             <span>ML</span>
             <span>LLM</span>
@@ -276,9 +301,9 @@
             <span>Statistical Modeling</span>
           </div>
         </div>
-        <div class="skills-group">
+        <div class="skills-group" data-aos="fade-up" data-aos-delay="100">
           <h3>Languages</h3>
-          <div class="skills-list">
+          <div class="skills-list pill-badges">
             <span>Python</span>
             <span>JavaScript</span>
             <span>SQL</span>
@@ -286,9 +311,9 @@
             <span>CSS</span>
           </div>
         </div>
-        <div class="skills-group">
+        <div class="skills-group" data-aos="fade-up" data-aos-delay="200">
           <h3>Frameworks</h3>
-          <div class="skills-list">
+          <div class="skills-list pill-badges">
             <span>Pytorch</span>
             <span>TensorFlow</span>
             <span>Next.js</span>
@@ -299,9 +324,9 @@
             <span>MongoDB</span>
           </div>
         </div>
-        <div class="skills-group">
+        <div class="skills-group" data-aos="fade-up" data-aos-delay="300">
           <h3>Tools</h3>
-          <div class="skills-list">
+          <div class="skills-list pill-badges">
             <span>AWS</span>
             <span>Git</span>
             <span>n8n</span>
@@ -484,5 +509,6 @@
   <!-- Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
+  <a href="#" class="floating-cv-btn" title="Download CV"><i class="fas fa-file-download"></i> Download CV</a>
 </body>
 </html>

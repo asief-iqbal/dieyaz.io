@@ -91,45 +91,56 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* Typewriter Effect in Hero Section */
-  const typewriter = document.getElementById('typewriter');
-  const messages = ['Web Developer', 'UI/UX Designer', 'Creative Problem Solver'];
-  let messageIndex = 0;
+  const typewriterSpan = document.querySelector('.typewriter-roles');
+  const roles = [
+    'AI Engineer',
+    'Data Scientist',
+    'Full Stack Developer',
+    'AI Agent Specialist'
+  ];
+  let roleIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
   let typingSpeed = 100;
-  
-  function type() {
-    const currentMessage = messages[messageIndex];
-    
+
+  function typeRole() {
+    const currentRole = roles[roleIndex];
     if (isDeleting) {
-      // Deleting text
-      typewriter.textContent = currentMessage.substring(0, charIndex - 1);
+      typewriterSpan.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
       typingSpeed = 50;
     } else {
-      // Typing text
-      typewriter.textContent = currentMessage.substring(0, charIndex + 1);
+      typewriterSpan.textContent = currentRole.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 150;
+      typingSpeed = 120;
     }
-    
-    // If completed typing current message
-    if (!isDeleting && charIndex === currentMessage.length) {
-      // Pause at end of typing
+    if (!isDeleting && charIndex === currentRole.length) {
       isDeleting = true;
-      typingSpeed = 2000; // Wait before deleting
+      typingSpeed = 1800;
     } else if (isDeleting && charIndex === 0) {
-      // Move to next message
       isDeleting = false;
-      messageIndex = (messageIndex + 1) % messages.length;
-      typingSpeed = 500; // Pause before typing next word
+      roleIndex = (roleIndex + 1) % roles.length;
+      typingSpeed = 600;
     }
-    
-    setTimeout(type, typingSpeed);
+    setTimeout(typeRole, typingSpeed);
   }
-  
-  if (typewriter) {
-    setTimeout(type, 1000);
+  if (typewriterSpan) {
+    setTimeout(typeRole, 1000);
+  }
+
+  /* Floating CV Button Scroll */
+  const floatingCVBtn = document.querySelector('.floating-cv-btn');
+  if (floatingCVBtn) {
+    floatingCVBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        window.scrollTo({
+          top: aboutSection.offsetTop - 60,
+          behavior: 'smooth'
+        });
+      }
+    });
   }
 
   /* Initialize Skill Bars */
