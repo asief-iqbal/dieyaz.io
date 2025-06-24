@@ -175,59 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* Initialize Testimonial Slider */
-  const testimonialTrack = document.querySelector('.testimonial-track');
-  const testimonials = document.querySelectorAll('.testimonial-item');
-  const prevBtn = document.querySelector('.testimonial-prev');
-  const nextBtn = document.querySelector('.testimonial-next');
-  const dotsContainer = document.querySelector('.testimonial-dots');
-  let currentIndex = 0;
-  
-  if (testimonialTrack && testimonials.length > 0) {
-    // Create dots
-    testimonials.forEach((_, index) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      if (index === 0) dot.classList.add('active');
-      
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-      });
-      
-      dotsContainer.appendChild(dot);
-    });
-    
-    // Previous slide
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      goToSlide(currentIndex);
-    });
-    
-    // Next slide
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      goToSlide(currentIndex);
-    });
-    
-    // Auto-advance slides
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      goToSlide(currentIndex);
-    }, 5000);
-    
-    // Function to switch slides
-    function goToSlide(index) {
-      testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
-      
-      // Update active dot
-      document.querySelectorAll('.dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-      
-      currentIndex = index;
-    }
-  }
-
   /* Project Filtering */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectItems = document.querySelectorAll('.project-item');
@@ -294,23 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2000);
     });
   }
-
-  /* Theme Toggle */
-  const themeToggle = document.getElementById('theme-toggle');
-  const storedTheme = localStorage.getItem('theme') || 'light';
-  
-  // Apply stored theme on page load
-  if (storedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-  }
-  
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    
-    // Store theme preference
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
 
   /* Initialize Elements */
   initSkillBars();

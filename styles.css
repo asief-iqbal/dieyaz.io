@@ -216,36 +216,6 @@ header .container {
   align-items: center;
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  color: var(--text-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-#theme-toggle:hover {
-  color: var(--primary);
-}
-
-#theme-toggle .fa-sun {
-  display: none;
-}
-
-body.dark-theme #theme-toggle .fa-sun {
-  display: block;
-}
-
-body.dark-theme #theme-toggle .fa-moon {
-  display: none;
-}
-
 /* Hamburger Menu */
 #hamburger {
   display: none;
@@ -868,119 +838,6 @@ body.dark-theme #theme-toggle .fa-moon {
   animation: none;
 }
 
-/* Testimonials Section */
-.testimonial-slider {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonial-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.testimonial-item {
-  flex: 0 0 100%;
-  padding: 0 15px;
-}
-
-.testimonial-content {
-  background: #fff;
-  border-radius: var(--border-radius);
-  padding: 40px;
-  box-shadow: var(--shadow);
-}
-
-.testimonial-text {
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.testimonial-text i {
-  font-size: 2rem;
-  color: rgba(67, 97, 238, 0.2);
-  position: absolute;
-  top: -15px;
-  left: -5px;
-}
-
-.testimonial-text p {
-  position: relative;
-  z-index: 1;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.testimonial-author img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(67, 97, 238, 0.1);
-}
-
-.author-info h4 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.author-info p {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.testimonial-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  gap: 20px;
-}
-
-.testimonial-prev, .testimonial-next {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(67, 97, 238, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.testimonial-prev:hover, .testimonial-next:hover {
-  background: var(--primary);
-  color: #fff;
-}
-
-.testimonial-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(67, 97, 238, 0.3);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.dot.active {
-  background: var(--primary);
-}
-
 /* Contact Section */
 .contact-container {
   display: grid;
@@ -1173,62 +1030,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Dark Theme */
-body.dark-theme {
-  background: var(--dark);
-  color: #fff;
-}
-
-body.dark-theme header {
-  background: rgba(10, 25, 47, 0.95);
-  backdrop-filter: blur(10px);
-}
-
-body.dark-theme .bg-light {
-  background: rgba(13, 30, 52, 0.5);
-}
-
-body.dark-theme .section-title, 
-body.dark-theme h1, 
-body.dark-theme h2, 
-body.dark-theme h3, 
-body.dark-theme h4, 
-body.dark-theme h5, 
-body.dark-theme h6,
-body.dark-theme .nav-links a,
-body.dark-theme .logo {
-  color: #fff;
-}
-
-body.dark-theme p, 
-body.dark-theme .text-light {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark-theme .btn-outline {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-body.dark-theme .service-card,
-body.dark-theme .skill-item,
-body.dark-theme .project-item,
-body.dark-theme .testimonial-content,
-body.dark-theme .info-card,
-body.dark-theme .contact-form-container {
-  background: rgba(15, 30, 51, 0.7);
-}
-
-body.dark-theme .form-group input, 
-body.dark-theme .form-group textarea {
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
-body.dark-theme #hamburger span {
-  background: #fff;
-}
-
 /* Media Queries */
 @media (max-width: 992px) {
   :root {
@@ -1285,10 +1086,6 @@ body.dark-theme #hamburger span {
     justify-content: center;
     transition: var(--transition);
     z-index: 900;
-  }
-  
-  body.dark-theme .nav-links {
-    background: var(--dark);
   }
   
   .nav-links.active {
