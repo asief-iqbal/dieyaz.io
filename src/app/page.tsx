@@ -1,4 +1,3 @@
-import { cacheLife } from "next/cache";
 import { HomePage } from "@/components/HomePage";
 import {
   AchievementsSection,
@@ -14,9 +13,6 @@ import {
 } from "@/components/sections";
 
 export default async function Home() {
-  "use cache";
-  cacheLife("weeks");
-
   return (
     <>
       <HomePage />
