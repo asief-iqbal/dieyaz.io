@@ -574,36 +574,23 @@ export function ContactSection() {
     subject: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
+    "idle" | "success"
   >("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      "",
+      formData.message,
+    ].join("\n");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:asiefiqbal7@gmail.com?subject=${encodeURIComponent(
+      formData.subject,
+    )}&body=${encodeURIComponent(body)}`;
+    setSubmitStatus("success");
   };
 
   const handleChange = (
@@ -727,29 +714,14 @@ export function ContactSection() {
                   rows={6}
                   className="w-full resize-none rounded-md border border-black/10 bg-black/[0.04] px-4 py-3 text-black outline-none transition-all placeholder:text-zinc-500 focus:border-black"
                 />
-                {submitStatus === "error" && (
-                  <p className="text-sm font-semibold text-red-600">
-                    Failed to send message. Please try again.
-                  </p>
-                )}
                 <motion.button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-black px-5 py-3 font-black text-white transition-all duration-300 hover:bg-lime-300 hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
-                  whileHover={{ y: isSubmitting ? 0 : -2 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-black px-5 py-3 font-black text-white transition-all duration-300 hover:bg-lime-300 hover:text-black"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <span className="h-5 w-5 rounded-full border-2 border-current border-t-transparent animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Mail size={19} />
-                      Send Message
-                    </>
-                  )}
+                  <Mail size={19} />
+                  Send Message
                 </motion.button>
               </form>
             )}
