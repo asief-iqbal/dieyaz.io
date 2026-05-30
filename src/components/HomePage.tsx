@@ -14,18 +14,6 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import {
-  EducationSection,
-  ServicesSection,
-  ProductionWorkSection,
-  ProjectsSection,
-  ResearchSection,
-  SkillsSection,
-  CertificationsSection,
-  AchievementsSection,
-  ContactSection,
-  Footer,
-} from "@/components/sections";
 
 const roles = [
   "AI Engineer",
@@ -328,17 +316,6 @@ export function HomePage() {
           </motion.div>
         </div>
       </section>
-
-      <EducationSection />
-      <ServicesSection />
-      <ProductionWorkSection />
-      <ProjectsSection />
-      <ResearchSection />
-      <AchievementsSection />
-      <SkillsSection />
-      <CertificationsSection />
-      <ContactSection />
-      <Footer />
     </main>
   );
 }

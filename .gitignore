@@ -120,3 +120,4 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.stackdump
+.vercel
